@@ -1,4 +1,4 @@
-import { DomainException } from "src/common/exceptions/domain.exception";
+import { DomainException } from 'src/common/exceptions/domain.exception';
 
 export class UserUnderageException extends DomainException {
   constructor() {
