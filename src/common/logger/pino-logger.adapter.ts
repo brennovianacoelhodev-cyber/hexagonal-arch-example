@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import pino from 'pino';
-import { LoggerPort } from 'src/ports/logger.port';
+import { LoggerPort } from './logger.port';
 
 @Injectable()
 export class PinoLoggerAdapter extends LoggerPort {
