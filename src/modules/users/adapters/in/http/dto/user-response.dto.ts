@@ -1,4 +1,4 @@
-import { UserEntity } from 'src/users/domain/user.entity';
+import { UserEntity } from 'src/modules/users/domain/user.entity';
 
 export class UserResponseDto {
   id: number;

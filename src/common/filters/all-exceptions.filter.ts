@@ -7,7 +7,7 @@ import {
   Logger,
 } from '@nestjs/common';
 import { Response } from 'express';
-import { DomainException } from 'src/exceptions/domain.exception';
+import { DomainException } from 'src/common/exceptions/domain.exception';
 
 @Catch()
 export class AllExceptionsFilter implements ExceptionFilter {
