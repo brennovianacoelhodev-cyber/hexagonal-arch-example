@@ -22,4 +22,8 @@ export class PinoLoggerAdapter extends LoggerPort {
   warn(message: string, context?: string): void {
     this.pino.warn({ context }, message);
   }
+  
+  debug(message: string, trace?: string, context?: string): void {
+    this.pino.debug({ context, trace }, message);
+  }
 }
