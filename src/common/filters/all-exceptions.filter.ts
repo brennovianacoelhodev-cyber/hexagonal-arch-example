@@ -4,14 +4,18 @@ import {
   ExceptionFilter,
   HttpException,
   HttpStatus,
-  Logger,
+  Inject,
 } from '@nestjs/common';
 import { Response } from 'express';
 import { DomainException } from 'src/common/exceptions/domain.exception';
+import { LoggerPort } from '../logger/logger.port';
 
 @Catch()
 export class AllExceptionsFilter implements ExceptionFilter {
-  private readonly logger = new Logger(AllExceptionsFilter.name);
+  constructor(
+    @Inject(LoggerPort)
+    private readonly logger: LoggerPort,
+  ) {}
 
   catch(exception: unknown, host: ArgumentsHost) {
     const response = host.switchToHttp().getResponse<Response>();
@@ -42,6 +46,7 @@ export class AllExceptionsFilter implements ExceptionFilter {
       message = 'An unexpected error occurred';
 
       this.logger.error(
+        'An unexpected error occurred',
         exception instanceof Error ? exception.message : 'Unknown error',
         exception instanceof Error ? exception.stack : undefined,
       );

@@ -22,11 +22,11 @@ import { PinoLoggerAdapter } from './pino-logger.adapter';
               },
             }),
             serializers: {
-              req: (req) => ({
+              req: (req: Request) => ({
                 method: req.method,
                 url: req.url,
               }),
-              res: (res) => ({
+              res: (res: Record<string, unknown>) => ({
                 statusCode: res.statusCode,
               }),
             },
