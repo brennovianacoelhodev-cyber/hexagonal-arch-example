@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { LoggerPort } from 'src/common/logger/logger.port';
-import { UserEntity } from '../domain/user.entity';
+import { UserEntity } from '../../domain/user.entity';
 import { HasherPort } from '../ports/hasher.port';
 import { UserRepositoryPort } from '../ports/user.repository.port';
 

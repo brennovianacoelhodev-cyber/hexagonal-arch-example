@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
-import { HasherPort } from 'src/modules/users/ports/hasher.port';
+import { HasherPort } from 'src/modules/users/application/ports/hasher.port';
 
 @Injectable()
 export class BcryptHasherAdapter extends HasherPort {

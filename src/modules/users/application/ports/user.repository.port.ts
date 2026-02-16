@@ -1,4 +1,4 @@
-import { UserEntity } from '../domain/user.entity';
+import { UserEntity } from '../../domain/user.entity';
 
 export abstract class UserRepositoryPort {
   abstract findAll(): Promise<UserEntity[]>;

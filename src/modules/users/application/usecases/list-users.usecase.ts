@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { UserEntity } from '../domain/user.entity';
+import { UserEntity } from '../../domain/user.entity';
 import { UserRepositoryPort } from '../ports/user.repository.port';
 
 @Injectable()
