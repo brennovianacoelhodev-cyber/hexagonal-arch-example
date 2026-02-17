@@ -5,7 +5,7 @@ import { Logger } from 'nestjs-pino';
 import { AppModule } from './app.module';
 import { AllExceptionsFilter } from './common/filters/all-exceptions.filter';
 import { ResponseEnvelopeInterceptor } from './common/interceptors/response-envelope.interceptor';
-import { LoggerPort } from './common/logger/logger.port';
+import { LoggerPort } from './common/ports/logger/logger.port';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { bufferLogs: true });
